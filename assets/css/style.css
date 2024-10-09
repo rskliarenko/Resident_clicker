@@ -1,0 +1,158 @@
+@font-face {
+    font-family: 'robotoregular';
+    src: url('../fonts/roboto/roboto-regular-webfont.woff2') format('woff2'),
+        url('../fonts/roboto/roboto-regular-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'resident_evilregular';
+    src: url('../fonts/resident_evil-webfont.woff2') format('woff2'),
+        url('../fonts/resident_evil-webfont.woff') format('woff');
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-image: url(../images/main_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    user-select: none;
+    height: 100vh;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.registration,
+.congratulations {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, .5);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+    border-radius: 10px;
+}
+
+.congratulations {
+    color: #fff;
+    text-align: center;
+    font-family: robotoregular, sans-serif;
+    flex-direction: column;
+    align-items: center;
+}
+
+.registration h1 {
+    margin: 0 0 30px;
+    color: #fff;
+    text-align: center;
+    font-family: resident_evilregular, sans-serif;
+    letter-spacing: 2px;
+}
+
+.registration .user-box {
+    /* position: relative; */
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.registration .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+
+.userName,
+.userEmail {
+    font-size: 25px;
+    color: #fff;
+    font-family: resident_evilregular, sans-serif;
+}
+
+.registration form button,
+.congratulations button {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #1b1919;
+    font-size: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin: 40px 48px;
+    letter-spacing: 1px;
+    font-family: resident_evilregular, sans-serif;
+    cursor: pointer;
+}
+
+.congratulations button {
+    margin: 0 auto;
+}
+
+.registration button:hover,
+.congratulations button:hover {
+    background: #03e9f4;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #03e9f4,
+        0 0 25px #03e9f4,
+        0 0 50px #03e9f4,
+        0 0 100px #03e9f4;
+}
+
+.game {
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    font-family: robotoregular, sans-serif;
+}
+
+.game p,
+.progressBar {
+    margin: 0 20px 20px;
+    color: #fff;
+    text-align: center;
+    font-family: robotoregular, sans-serif;
+}
+
+.result-score,
+.end-message-text {
+    margin: 20px 30px;
+}
+
+.player {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #fff;
+    padding: 10px;
+    font-size: 20px;
+    font-family: robotoregular, sans-serif;
+}
+
+progress {
+    accent-color: rgb(228, 79, 25);
+    width: 45%;
+    margin-top: -20px;
+}
